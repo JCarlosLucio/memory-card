@@ -18,12 +18,14 @@ function App() {
   ];
 
   const [cards, setCards] = useState(shuffle(initialCards));
+  const [score, setScore] = useState([]);
 
   return (
     <div>
       <header>
         <h1>Memory Card</h1>
-        {/* score/topscore go here */}
+        <h3>Score: {score.length}</h3>
+        {/* topscore goes here */}
       </header>
       <main>{cards.map((card) => <div>{card.id}</div>)}</main>
     </div>
