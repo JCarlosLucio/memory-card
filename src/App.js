@@ -21,6 +21,15 @@ function App() {
   const [cards, setCards] = useState(shuffle(initialCards));
   const [score, setScore] = useState([]);
 
+  const handleClick = (id) => {
+    if (score.includes(id)) {
+      setScore([]);
+    } else {
+      setScore([...score, id]);
+    }
+    setCards(shuffle(initialCards));
+  };
+
   return (
     <div>
       <header>
