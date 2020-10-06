@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { shuffle } from './helpers/helpers';
 
 function App() {
   const initialCards = [
@@ -16,7 +17,7 @@ function App() {
     { id: 11, imgSrc: '' },
   ];
 
-  const [cards, setCards] = useState(initialCards);
+  const [cards, setCards] = useState(shuffle(initialCards));
 
   return (
     <div>
