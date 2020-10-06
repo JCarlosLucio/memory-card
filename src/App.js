@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Card from './components/Card';
 import { shuffle } from './helpers/helpers';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         <h3>Score: {score.length}</h3>
         {/* topscore goes here */}
       </header>
-      <main>{cards.map((card) => <div>{card.id}</div>)}</main>
+      <main>{cards.map((card) => <Card />)}</main>
     </div>
   );
 }
