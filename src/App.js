@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
 import CardGrid from './components/CardGrid';
 import { shuffle } from './helpers/helpers';
 
@@ -32,11 +33,7 @@ function App() {
 
   return (
     <div>
-      <header>
-        <h1>Memory Card</h1>
-        <h3>Score: {score.length}</h3>
-        {/* topscore goes here */}
-      </header>
+      <Header score={score.length} />
       <CardGrid cards={cards} handleClick={handleClick} />
     </div>
   );
