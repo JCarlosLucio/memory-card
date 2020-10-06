@@ -3,7 +3,11 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <h1>Memory Card</h1>
+      <header>
+        <h1>Memory Card</h1>
+        {/* score/topscore go here */}
+      </header>
+      <main>{/* cards go here */}</main>
     </div>
   );
 }
