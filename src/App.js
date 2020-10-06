@@ -24,7 +24,7 @@ function App() {
         <h1>Memory Card</h1>
         {/* score/topscore go here */}
       </header>
-      <main>{/* cards go here */}</main>
+      <main>{cards.map((card) => <div>{card.id}</div>)}</main>
     </div>
   );
 }
