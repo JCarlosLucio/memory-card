@@ -6,6 +6,11 @@
   height: 23.5rem;
   border-radius: 1rem;
   cursor: pointer;
+
+  &:hover .image {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 14px -4px rgba(0, 0, 0, 0.6);
+  }
 }
 
 .image {
