@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Card from './components/Card';
+import CardGrid from './components/CardGrid';
 import { shuffle } from './helpers/helpers';
 
 function App() {
@@ -37,11 +37,7 @@ function App() {
         <h3>Score: {score.length}</h3>
         {/* topscore goes here */}
       </header>
-      <main>
-        {cards.map((card) => (
-          <Card id={card.id} img={card.img} handleClick={handleClick} />
-        ))}
-      </main>
+      <CardGrid cards={cards} handleClick={handleClick} />
     </div>
   );
 }
