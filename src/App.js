@@ -37,7 +37,11 @@ function App() {
         <h3>Score: {score.length}</h3>
         {/* topscore goes here */}
       </header>
-      <main>{cards.map((card) => <Card id={card.id} img={card.img} />)}</main>
+      <main>
+        {cards.map((card) => (
+          <Card id={card.id} img={card.img} handleClick={handleClick} />
+        ))}
+      </main>
     </div>
   );
 }
