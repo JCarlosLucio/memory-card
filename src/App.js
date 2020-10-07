@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import CardGrid from './components/CardGrid';
 import { shuffle } from './helpers/helpers';
@@ -21,6 +21,7 @@ function App() {
 
   const [cards, setCards] = useState(shuffle(initialCards));
   const [score, setScore] = useState([]);
+  const [topScore, setTopScore] = useState(0);
 
   const handleClick = (id) => {
     if (score.includes(id)) {
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <Header score={score.length} />
+      <Header score={score.length} topScore={topScore} />
       <CardGrid cards={cards} handleClick={handleClick} />
     </div>
   );
