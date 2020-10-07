@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from './Header.module.scss';
 
 function Header({ score }) {
   return (
-    <header>
+    <header className={styles.root}>
       <h1>Memory Card</h1>
       <h3>Score: {score}</h3>
-      {/* topscore goes here */}
+      <h3>Top Score: 0</h3>
     </header>
   );
 }
