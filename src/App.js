@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import useShuffleState from './hooks/useShuffleState';
 import Header from './components/Header';
 import CardGrid from './components/CardGrid';
-import { shuffle } from './helpers/helpers';
 
 function App() {
   const initialCards = [
@@ -19,7 +19,7 @@ function App() {
     { id: 11, img: '80e_Gtz58Ks' },
   ];
 
-  const [cards, setCards] = useState(shuffle(initialCards));
+  const [cards, shuffleCards] = useShuffleState(initialCards);
   const [score, setScore] = useState([]);
   const [topScore, setTopScore] = useState(0);
 
@@ -38,7 +38,7 @@ function App() {
     } else {
       setScore([...score, id]);
     }
-    setCards(shuffle(initialCards));
+    shuffleCards(initialCards);
   };
 
   return (
