@@ -9,7 +9,7 @@ function Header({ score, topScore }) {
         <h3>Score</h3>
         <h2>{score}</h2>
       </div>
-      <div className={styles.score}>
+      <div className={`${styles.score} ${topScore === 12 ? styles.win : ''}`}>
         <h3>Top Score</h3>
         <h2>{topScore}</h2>
       </div>
