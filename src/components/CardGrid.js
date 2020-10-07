@@ -6,7 +6,12 @@ function CardGrid({ cards, handleClick }) {
   return (
     <div className={styles.root}>
       {cards.map((card) => (
-        <Card id={card.id} img={card.img} handleClick={handleClick} />
+        <Card
+          key={card.id}
+          id={card.id}
+          img={card.img}
+          handleClick={handleClick}
+        />
       ))}
     </div>
   );
