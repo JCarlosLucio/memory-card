@@ -23,6 +23,15 @@ function App() {
   const [score, setScore] = useState([]);
   const [topScore, setTopScore] = useState(0);
 
+  useEffect(
+    () => {
+      if (score.length > topScore) {
+        setTopScore(score.length);
+      }
+    },
+    [score, topScore]
+  );
+
   const handleClick = (id) => {
     if (score.includes(id)) {
       setScore([]);
